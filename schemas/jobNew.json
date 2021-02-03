@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "properties": {
+        "id": {
+            "description": "The unique identifier for a job",
+            "type": "integer"
+        },
+        "title": {
+            "type": "string"
+        },
+        "salary": {
+            "type": "integer",
+            "exclusiveMinimum": 0 
+        },
+        "equity": {
+            "type": "string"
+        },
+        "company_handle": {
+            "type": "string",
+            "minimum": 1,
+            "maximum": 30
+        }
+    },
+    "additionalProperties": false,
+    "required": [
+        "title",
+        "company_handle"
+    ]
+}
